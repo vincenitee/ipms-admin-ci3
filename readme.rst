@@ -40,7 +40,7 @@ Quick XAMPP Installation
 
 Download the CI 3.1.13 ZIP and extract it to::
 
-   C:\xampp\htdocs\admin-system\
+   C:\xampp\htdocs\ipms-admin-ci3\
 
 2. Start XAMPP
 ~~~~~~~~~~~~~~
@@ -54,7 +54,7 @@ Edit ``application/config/config.php``:
 
 .. code-block:: php
 
-   $config['base_url'] = 'http://localhost/admin-system/';
+   $config['base_url'] = 'http://localhost/ipms-admin-ci3/';
 
 4. Configure Database
 ~~~~~~~~~~~~~~~~~~~~~
@@ -64,7 +64,7 @@ Edit ``application/config/database.php``:
 .. code-block:: php
 
    $db['default']['hostname'] = 'localhost';
-   $db['default']['database'] = 'ci_admin';
+   $db['default']['database'] = 'ipms_admin';
    $db['default']['username'] = 'root';
    $db['default']['password'] = '';
 
@@ -83,7 +83,7 @@ Create a ``.htaccess`` file in the project root with ``mod_rewrite`` enabled:
 6. Test Your Installation
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Visit: `http://localhost/admin-system/ <http://localhost/admin-system/>`_
+Visit: `http://localhost/ipms-admin-ci3/ <http://localhost/ipms-admin-ci3/>`_
 
 ----
 
@@ -98,7 +98,7 @@ PowerShell (Windows / XAMPP)
 
 .. code-block:: powershell
 
-   # Open PowerShell inside admin-system/
+   # Open PowerShell inside ipms-admin-ci3/
    .\ci-gen.ps1 make:user
 
 Bash (Git Bash / WSL)
@@ -109,7 +109,7 @@ Bash (Git Bash / WSL)
    chmod +x ci-gen.sh
    ./ci-gen.sh make:admin
 
-Then visit ``http://localhost/admin-system/admin`` for instant CRUD!
+Then visit ``http://localhost/ipms-admin-ci3/admin`` for instant CRUD!
 
 ----
 
@@ -130,7 +130,7 @@ Migrations
 
 3. **Run** migrations by visiting::
 
-      http://localhost/admin-system/migrate
+      http://localhost/ipms-admin-ci3/migrate
 
 ----
 
@@ -140,7 +140,7 @@ Development Workflow
 .. code-block:: text
 
    1. .\ci-gen.ps1 make:users              # Scaffold files
-   2. http://localhost/admin-system/migrate # Run DB migrations
+   2. http://localhost/ipms-admin-ci3/migrate # Run DB migrations
    3. Customize application/controllers/users.php
    4. Add Tailwind / Bootstrap to your views
    5. Deploy to your PHP 7.2.3 server
